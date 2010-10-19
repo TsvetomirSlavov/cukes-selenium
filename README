@@ -4,9 +4,13 @@ Here are a few basic web examples with Cucumber and Selenium.
 You have to manually start up a selenium remote controll process in order to run the examples.
 I wasn't a fan of the default webrat/selenium RC settings so I wanted to specify my own.
 
-Terminal 1:
-java -jar selenium-server.jar -timeout 15 -singleWindow -port 4444
+Setup:
 
-Terminal 2:
-cucumber features
+bundle install --path vendor/bundle
+bundle exec cucumber features
+
+Selenium RC:
+
+Edit features/support/env.rb to point to an existing RC or start your own.
+java -jar selenium-server.jar -singleWindow -port 4444
 
